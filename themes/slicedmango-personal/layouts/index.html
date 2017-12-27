@@ -1,0 +1,31 @@
+{{ define "main" }}
+<article class="flex items-stretch flex-wrap justify-end">
+  <section class="w-100 w-50-m w-third-l min-vh-100 bg-navy ph3 ph4-ns">
+    <img alt="" src="{{ (trim .Site.Data.profile.profile_picture "/") | absURL }}" class="mt5 ba b--white bw3 w-80 mw5 center db br-100" />
+    <h1 class="tc ttu white tracked">{{.Site.Data.profile.name}}</h1>
+    <p class="near-white tc">{{.Site.Data.profile.bio}}</p>
+  </section>
+  <section class="w-100 w-50-m w-third-l min-vh-100 bg-near-white">
+    {{range where .Site.Pages "Title" "Temple" }}
+    <div class="aspect-ratio aspect-ratio--16x9">
+      <div class="aspect-ratio--object cover bg-center" style="background-image: url('{{ (trim .Params.featured_image "/") | absURL }}')"></div>
+    </div>
+    <h2 class="tc ph3 ph5-ns">{{.Params.hero_text}}</h2>
+    <div class="ph3 ph5-ns tj">
+      {{.Content}}
+    </div>
+    {{end}}
+  </section>
+  <section class="w-100 w-50-m w-third-l min-vh-100 bg-white">
+    {{range where .Site.Pages "Title" "Family" }}
+    <div class="aspect-ratio aspect-ratio--16x9">
+      <div class="aspect-ratio--object cover bg-center" style="background-image: url('{{ (trim .Params.featured_image "/") | absURL }}')"></div>
+    </div>
+    <h2 class="tc ph3 ph5-ns">{{.Params.hero_text}}</h2>
+    <div class="ph3 ph5-ns tj">
+      {{.Content}}
+    </div>
+    {{end}}
+  </section>
+</article>
+{{ end }}
