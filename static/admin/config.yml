@@ -31,4 +31,13 @@ collections:
           - {label: Date, name: date, widget: datetime}
           - {label: Featured_image, name: featured_image, widget: image}
           - {label: Hero_text, name: hero_text, widget: string}
-          - {label: Body, name: body, widget: md}
+          - {label: Body, name: body, widget: markdown}
+      - label: "Temple"
+        name: "temple"
+        file: "content/temple.md"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Date, name: date, widget: datetime}
+          - {label: Featured_image, name: featured_image, widget: image}
+          - {label: Hero_text, name: hero_text, widget: string}
+          - {label: Body, name: body, widget: markdown}          
