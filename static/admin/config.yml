@@ -23,23 +23,8 @@ collections:
   - label: "Pages"
     name: "pages"
     files:
-      - label: "Temple"
-        name: "temple"
-        create: true
-        file: "content/temple.yml"
-        fields:
-          - {label: Title, name: title, widget: string}
-          - {label: Intro, name: intro, widget: markdown}
-          - label: Team
-            name: team
-            widget: list
-            fields:
-              - {label: Name, name: name, widget: string}
-              - {label: Position, name: position, widget: string}
-              - {label: Photo, name: photo, widget: image}
       - label: "Family"
         name: "family"
-        create: true
         file: "content/family.md"
         fields:
           - {label: Title, name: title, widget: string}
