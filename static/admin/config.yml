@@ -40,16 +40,10 @@ collections:
       - label: "Family"
         name: "family"
         create: true
-        file: "content/family.yml"
+        file: "content/family.md"
         fields:
           - {label: Title, name: title, widget: string}
-          - {label: Intro, name: intro, widget: markdown}
-          - label: Locations
-            name: locations
-            widget: list
-            fields:
-              - {label: Name, name: name, widget: string}
-              - {label: Address, name: address, widget: string}
-
-
-
+          - {label: Date, name: date, widget: datetime}
+          - {label: Featured_image, name: featured_image, widget: image}
+          - {label: Hero_text, name: hero_text, widget: string}
+          - {label: Body, name: body, widget: md}
