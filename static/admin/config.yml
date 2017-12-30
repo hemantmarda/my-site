@@ -10,6 +10,7 @@ collections:
    files:
     - label: "Temple"
       name: "temple"
+      create: true
       file: "content/temple.yml"
       fields:
         - {label: Title, name: title, widget: string}
@@ -23,6 +24,7 @@ collections:
             - {label: Photo, name: photo, widget: image}
     - label: "Family"
       name: "family"
+      create: true
       file: "content/family.yml"
       fields:
         - {label: Title, name: title, widget: string}
